@@ -10,7 +10,7 @@ class MedicationTable extends StatefulWidget {
 class _MedicationTableState extends State<MedicationTable> {
   // Move medications to state so we can modify it
   final List<Map<String, dynamic>> _medications = [
-    {'name': 'Pill A', 'time': '9:00', 'taken': true},
+    {'name': 'Pill A', 'time': '9:00', 'taken': false},
     {'name': 'Pill B', 'time': '11:00', 'taken': false},
     {'name': 'Pill C', 'time': '12:00', 'taken': false},
   ];
