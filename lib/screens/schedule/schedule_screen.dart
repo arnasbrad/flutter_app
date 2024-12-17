@@ -15,9 +15,9 @@ class ScheduleScreen extends StatelessWidget {
           child: Column(
             children: [
               const ProfileHeader(),
-              const SizedBox(height: 16),
+              const SizedBox(height: 30),
               const ContactDoctorButton(),
-              const SizedBox(height: 16),
+              const SizedBox(height: 30),
               const Expanded(
                 child: MedicationTable(),
               ),

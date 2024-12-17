@@ -26,13 +26,13 @@ class ContactDoctorButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Icon(Icons.medical_services, color: Colors.blue),
+            Icon(Icons.medical_services, color: Colors.blue, size: 50),
             SizedBox(width: 8),
             Text(
               'Contact Doctor',
               style: TextStyle(
                 color: Colors.blue,
-                fontSize: 18,
+                fontSize: 40,
                 fontWeight: FontWeight.w500,
               ),
             ),

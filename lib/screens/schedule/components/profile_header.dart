@@ -17,19 +17,19 @@ class ProfileHeader extends StatelessWidget {
       child: Row(
         children: [
           CircleAvatar(
-            radius: 25,
+            radius: 50,
             backgroundColor: Colors.blue,
             child: const Icon(
               Icons.person,
               color: Colors.white,
-              size: 30,
+              size: 50,
             ),
           ),
           const SizedBox(width: 12),
           const Text(
             'Profile',
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 50,
               color: Colors.blue,
               fontWeight: FontWeight.bold,
             ),

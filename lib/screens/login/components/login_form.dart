@@ -43,7 +43,7 @@ class _LoginFormState extends State<LoginForm> {
         const Text(
           'Log In',
           style: TextStyle(
-            fontSize: 32,
+            fontSize: 60,
             fontWeight: FontWeight.bold,
             color: Colors.blue,
           ),
@@ -52,17 +52,19 @@ class _LoginFormState extends State<LoginForm> {
         const Text(
           'Email',
           style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
           ),
         ),
         const SizedBox(height: 8),
         TextField(
           controller: _emailController,
           keyboardType: TextInputType.emailAddress,
+          style: const TextStyle(fontSize: 30),
           decoration: InputDecoration(
             filled: true,
             fillColor: Colors.blue.shade50,
+            contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: BorderSide.none,
@@ -73,17 +75,19 @@ class _LoginFormState extends State<LoginForm> {
         const Text(
           'Password',
           style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
           ),
         ),
         const SizedBox(height: 8),
         TextField(
           controller: _passwordController,
           obscureText: _obscurePassword,
+          style: const TextStyle(fontSize: 30),
           decoration: InputDecoration(
             filled: true,
             fillColor: Colors.blue.shade50,
+            contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: BorderSide.none,
@@ -114,7 +118,7 @@ class _LoginFormState extends State<LoginForm> {
           ),
           child: const Text(
             'Log In',
-            style: TextStyle(fontSize: 18),
+            style: TextStyle(fontSize: 60),
           ),
         ),
       ],

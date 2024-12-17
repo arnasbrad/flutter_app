@@ -35,19 +35,25 @@ class _MedicationTableState extends State<MedicationTable> {
             children: const [
               Expanded(
                 child: Padding(
-                  padding: EdgeInsets.all(12.0),
+                  padding: EdgeInsets.all(16.0),
                   child: Text(
                     'Medication',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 35,
+                    ),
                   ),
                 ),
               ),
               Expanded(
                 child: Padding(
-                  padding: EdgeInsets.all(12.0),
+                  padding: EdgeInsets.all(16.0),
                   child: Text(
                     'Time',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 35,
+                    ),
                   ),
                 ),
               ),
@@ -73,14 +79,20 @@ class _MedicationTableState extends State<MedicationTable> {
                     children: [
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Text(medication['name'] as String),
+                          padding: const EdgeInsets.all(16.0),
+                          child: Text(
+                            medication['name'] as String,
+                            style: const TextStyle(fontSize: 35),
+                          ),
                         ),
                       ),
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Text(medication['time'] as String),
+                          padding: const EdgeInsets.all(16.0),
+                          child: Text(
+                            medication['time'] as String,
+                            style: const TextStyle(fontSize: 35),
+                          ),
                         ),
                       ),
                     ],

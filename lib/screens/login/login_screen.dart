@@ -11,6 +11,7 @@ class LoginScreen extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
+          iconSize: 40,
         ),
       ),
       body: const Padding(

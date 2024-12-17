@@ -28,14 +28,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
-        ),
-        title: const Text(
-          'Profile',
-          style: TextStyle(
-            color: Colors.blue,
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-          ),
+          iconSize: 40,
         ),
       ),
       body: Padding(
@@ -43,16 +36,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const SizedBox(height: 20),
+            const Text(
+              'Profile',
+              style: TextStyle(
+                fontSize: 60,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
+              ),
+            ),
+            const SizedBox(height: 40),
             // Profile Avatar Section
             Center(
               child: Stack(
                 children: [
                   CircleAvatar(
-                    radius: 50,
+                    radius: 80,
                     backgroundColor: Colors.blue.shade200,
                     child: const Icon(
                       Icons.person,
-                      size: 50,
+                      size: 80,
                       color: Colors.white,
                     ),
                   ),
@@ -60,14 +63,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     bottom: 0,
                     right: 0,
                     child: Container(
-                      padding: const EdgeInsets.all(4),
+                      padding: const EdgeInsets.all(8),
                       decoration: const BoxDecoration(
                         color: Colors.blue,
                         shape: BoxShape.circle,
                       ),
                       child: const Icon(
                         Icons.edit,
-                        size: 20,
+                        size: 35,
                         color: Colors.white,
                       ),
                     ),
@@ -81,16 +84,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const Text(
               'Email',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 40,
                 fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 8),
             TextField(
               controller: _emailController,
+              style: const TextStyle(fontSize: 30),
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.blue.shade50,
+                contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide: BorderSide.none,
@@ -103,7 +108,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const Text(
               'Password',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 40,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -111,9 +116,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             TextField(
               controller: _passwordController,
               obscureText: true,
+              style: const TextStyle(fontSize: 30),
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.blue.shade50,
+                contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide: BorderSide.none,
@@ -130,14 +137,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 16),
+                minimumSize: const Size(double.infinity, 50),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
               ),
               child: const Text(
                 'Update',
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: 50),
               ),
             ),
 
@@ -153,16 +160,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
+                backgroundColor: Colors.blue.withOpacity(0.3),
                 foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 16),
+                minimumSize: const Size(double.infinity, 50),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
               ),
               child: const Text(
                 'Log Out',
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: 40),
               ),
             ),
           ],

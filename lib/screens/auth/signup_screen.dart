@@ -37,16 +37,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'New Account',
-          style: TextStyle(
-            color: Colors.blue,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
+          iconSize: 40,
         ),
       ),
       body: Padding(
@@ -54,10 +48,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const SizedBox(height: 20),
+            const Text(
+              'New Account',
+              style: TextStyle(
+                fontSize: 60,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
+              ),
+            ),
+            const SizedBox(height: 40),
             const Text(
               'Full name',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 40,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -67,17 +71,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.blue.shade50,
+                contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide: BorderSide.none,
                 ),
               ),
+              style: const TextStyle(fontSize: 30),
             ),
             const SizedBox(height: 20),
             const Text(
               'Email',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 40,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -88,17 +94,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.blue.shade50,
+                contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide: BorderSide.none,
                 ),
               ),
+              style: const TextStyle(fontSize: 30),
             ),
             const SizedBox(height: 20),
             const Text(
               'Password',
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 40,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -109,6 +117,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.blue.shade50,
+                contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide: BorderSide.none,
@@ -125,6 +134,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   },
                 ),
               ),
+              style: const TextStyle(fontSize: 30),
             ),
             const SizedBox(height: 30),
             ElevatedButton(
@@ -139,7 +149,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               child: const Text(
                 'Sign Up',
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: 60),
               ),
             ),
           ],
