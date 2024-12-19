@@ -24,14 +24,20 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
               'Time to take Pill A!',
               style: TextStyle(fontSize: 35),
             ),
-            leading: const Icon(Icons.notifications_active, color: Colors.blue, size: 40),
-            backgroundColor: Colors.blue.shade50,
+            leading: Icon(Icons.notifications_active, color: Colors.indigoAccent, size: 40),
+            backgroundColor: Colors.indigo.shade100,
             actions: [
               TextButton(
                 onPressed: () {
                   ScaffoldMessenger.of(context).hideCurrentMaterialBanner();
                 },
-                child: const Text('Dismiss', style: TextStyle(fontSize: 30),),
+                child: Text(
+                  'Dismiss',
+                  style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.indigoAccent.shade700,
+                  ),
+                ),
               ),
             ],
           ),
@@ -47,14 +53,24 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const ProfileHeader(),
               const SizedBox(height: 30),
-              const ContactDoctorButton(),
-              const SizedBox(height: 30),
+              Text(
+                'Today\'s Medication',
+                style: TextStyle(
+                  fontSize: 60,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.indigoAccent,
+                ),
+              ),
+              const SizedBox(height: 20),
               const Expanded(
                 child: MedicationTable(),
               ),
+              const SizedBox(height: 30),
+              const ContactDoctorButton(),
             ],
           ),
         ),

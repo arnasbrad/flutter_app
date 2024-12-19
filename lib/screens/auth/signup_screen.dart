@@ -49,12 +49,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const SizedBox(height: 20),
-            const Text(
+            Text(
               'New Account',
               style: TextStyle(
                 fontSize: 60,
                 fontWeight: FontWeight.bold,
-                color: Colors.blue,
+                color: Colors.indigoAccent,
               ),
             ),
             const SizedBox(height: 40),
@@ -70,7 +70,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               controller: _fullNameController,
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Colors.blue.shade50,
+                fillColor: Colors.indigo.shade100,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -93,7 +93,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Colors.blue.shade50,
+                fillColor: Colors.indigo.shade100,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -116,7 +116,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               obscureText: _obscurePassword,
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Colors.blue.shade50,
+                fillColor: Colors.indigo.shade100,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -140,9 +140,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ElevatedButton(
               onPressed: _handleSignUp,
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                backgroundColor: Colors.indigoAccent.shade700,
                 foregroundColor: Colors.white,
-                minimumSize: const Size(double.infinity, 50),
+                minimumSize: const Size(double.infinity, 100),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),

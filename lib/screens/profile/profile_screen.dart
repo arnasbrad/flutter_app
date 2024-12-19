@@ -14,6 +14,34 @@ class _ProfileScreenState extends State<ProfileScreen> {
   final _emailController = TextEditingController(text: 'example@example.com');
   final _passwordController = TextEditingController(text: '********');
 
+  void _handleUpdate() {
+    // Mock update functionality
+    print('Update with:');
+    print('Email: ${_emailController.text}');
+    print('Password: ${_passwordController.text}');
+
+    // Show success message
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Padding(
+          padding: EdgeInsets.symmetric(vertical: 10.0),
+          child: Text(
+            'Profile updated successfully',
+            style: TextStyle(fontSize: 24),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        backgroundColor: Colors.indigoAccent,
+        duration: const Duration(seconds: 3),
+        behavior: SnackBarBehavior.floating,
+        margin: const EdgeInsets.all(20),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
+      ),
+    );
+  }
+
   @override
   void dispose() {
     _emailController.dispose();
@@ -37,12 +65,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const SizedBox(height: 20),
-            const Text(
+            Text(
               'Profile',
               style: TextStyle(
                 fontSize: 60,
                 fontWeight: FontWeight.bold,
-                color: Colors.blue,
+                color: Colors.indigoAccent,
               ),
             ),
             const SizedBox(height: 40),
@@ -52,7 +80,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
                   CircleAvatar(
                     radius: 80,
-                    backgroundColor: Colors.blue.shade200,
+                    backgroundColor: Colors.indigo.shade200,
                     child: const Icon(
                       Icons.person,
                       size: 80,
@@ -64,8 +92,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     right: 0,
                     child: Container(
                       padding: const EdgeInsets.all(8),
-                      decoration: const BoxDecoration(
-                        color: Colors.blue,
+                      decoration: BoxDecoration(
+                        color: Colors.indigoAccent,
                         shape: BoxShape.circle,
                       ),
                       child: const Icon(
@@ -78,7 +106,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 5),
 
             // Email Field
             const Text(
@@ -94,7 +122,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               style: const TextStyle(fontSize: 30),
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Colors.blue.shade50,
+                fillColor: Colors.indigo.shade100,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -119,7 +147,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               style: const TextStyle(fontSize: 30),
               decoration: InputDecoration(
                 filled: true,
-                fillColor: Colors.blue.shade50,
+                fillColor: Colors.indigo.shade100,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -131,13 +159,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
             // Update Button
             ElevatedButton(
-              onPressed: () {
-                // Handle update logic
-              },
+              onPressed: _handleUpdate,
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                backgroundColor: Colors.indigoAccent.shade700,
                 foregroundColor: Colors.white,
-                minimumSize: const Size(double.infinity, 50),
+                minimumSize: const Size(double.infinity, 100),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
@@ -160,9 +186,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue.withOpacity(0.3),
+                backgroundColor: Colors.indigo.withOpacity(0.3),
                 foregroundColor: Colors.white,
-                minimumSize: const Size(double.infinity, 50),
+                minimumSize: const Size(double.infinity, 70),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),

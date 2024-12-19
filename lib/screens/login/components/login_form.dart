@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../../schedule/schedule_screen.dart';
+import 'forgot_password_screen.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -34,18 +34,26 @@ class _LoginFormState extends State<LoginForm> {
     );
   }
 
+  void _navigateToForgotPassword() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const ForgotPasswordScreen(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         const SizedBox(height: 20),
-        const Text(
+        Text(
           'Log In',
           style: TextStyle(
             fontSize: 60,
             fontWeight: FontWeight.bold,
-            color: Colors.blue,
+            color: Colors.indigoAccent,
           ),
         ),
         const SizedBox(height: 40),
@@ -63,8 +71,9 @@ class _LoginFormState extends State<LoginForm> {
           style: const TextStyle(fontSize: 30),
           decoration: InputDecoration(
             filled: true,
-            fillColor: Colors.blue.shade50,
-            contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+            fillColor: Colors.indigo.shade100,
+            contentPadding:
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: BorderSide.none,
@@ -86,8 +95,9 @@ class _LoginFormState extends State<LoginForm> {
           style: const TextStyle(fontSize: 30),
           decoration: InputDecoration(
             filled: true,
-            fillColor: Colors.blue.shade50,
-            contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+            fillColor: Colors.indigo.shade100,
+            contentPadding:
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: BorderSide.none,
@@ -105,13 +115,26 @@ class _LoginFormState extends State<LoginForm> {
             ),
           ),
         ),
-        const SizedBox(height: 30),
+        Align(
+          alignment: Alignment.centerRight,
+          child: TextButton(
+            onPressed: _navigateToForgotPassword,
+            child: const Text(
+              'Forgot Password?',
+              style: TextStyle(
+                fontSize: 50,
+                color: Colors.indigoAccent,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 10),
         ElevatedButton(
           onPressed: _handleLogin,
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.indigoAccent,
             foregroundColor: Colors.white,
-            minimumSize: const Size(double.infinity, 50),
+            minimumSize: const Size(double.infinity, 100),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),

@@ -8,7 +8,6 @@ class MedicationTable extends StatefulWidget {
 }
 
 class _MedicationTableState extends State<MedicationTable> {
-  // Move medications to state so we can modify it
   final List<Map<String, dynamic>> _medications = [
     {'name': 'Pill A', 'time': '9:00', 'taken': false},
     {'name': 'Pill B', 'time': '11:00', 'taken': false},
@@ -28,8 +27,8 @@ class _MedicationTableState extends State<MedicationTable> {
         // Header
         Container(
           decoration: BoxDecoration(
-            color: Colors.blue.shade100,
-            border: Border.all(color: Colors.blue.shade200),
+            color: Colors.indigo.shade100,
+            border: Border.all(color: Colors.indigo.shade200),
           ),
           child: Row(
             children: const [
@@ -57,6 +56,7 @@ class _MedicationTableState extends State<MedicationTable> {
                   ),
                 ),
               ),
+              SizedBox(width: 60), // Space for checkmark column
             ],
           ),
         ),
@@ -71,9 +71,9 @@ class _MedicationTableState extends State<MedicationTable> {
                 child: Container(
                   decoration: BoxDecoration(
                     color: medication['taken'] == true
-                        ? Colors.green.shade100
-                        : Colors.blue.shade50,
-                    border: Border.all(color: Colors.blue.shade200),
+                        ? Colors.indigoAccent.shade100
+                        : Colors.indigo.shade50,
+                    border: Border.all(color: Colors.indigo.shade200),
                   ),
                   child: Row(
                     children: [
@@ -93,6 +93,20 @@ class _MedicationTableState extends State<MedicationTable> {
                             medication['time'] as String,
                             style: const TextStyle(fontSize: 35),
                           ),
+                        ),
+                      ),
+                      // Checkmark icon
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: SizedBox(
+                          width: 60,
+                          child: medication['taken'] == true
+                              ? Icon(
+                            Icons.check_circle,
+                            color: Colors.indigoAccent.shade700,
+                            size: 40,
+                          )
+                              : null,
                         ),
                       ),
                     ],

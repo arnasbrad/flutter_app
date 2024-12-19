@@ -19,12 +19,12 @@ class DoctorInfoScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const SizedBox(height: 20),
-            const Text(
+            Text(
               'Doctor Info',
               style: TextStyle(
                 fontSize: 60,
                 fontWeight: FontWeight.bold,
-                color: Colors.blue,
+                color: Colors.indigoAccent,
               ),
             ),
             const SizedBox(height: 40),
@@ -33,7 +33,7 @@ class DoctorInfoScreen extends StatelessWidget {
                 margin: const EdgeInsets.all(20),
                 padding: const EdgeInsets.all(30),
                 decoration: BoxDecoration(
-                  color: Colors.blue.shade50,
+                  color: Colors.indigo.shade50,
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: Column(
@@ -42,21 +42,21 @@ class DoctorInfoScreen extends StatelessWidget {
                     // Placeholder for doctor's image
                     CircleAvatar(
                       radius: 90,
-                      backgroundColor: Colors.grey.shade200,
-                      child: const Icon(
+                      backgroundColor: Colors.indigo.shade100,
+                      child: Icon(
                         Icons.person,
                         size: 120,
-                        color: Colors.grey,
+                        color: Colors.indigo.shade300,
                       ),
                     ),
                     const SizedBox(height: 30),
                     // Doctor's name
-                    const Text(
+                    Text(
                       'Dr. Alexander Bennett, Ph.D.',
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
-                        color: Colors.blue,
+                        color: Colors.indigoAccent,
                       ),
                       textAlign: TextAlign.center,
                     ),

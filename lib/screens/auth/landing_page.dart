@@ -19,7 +19,7 @@ class LandingPage extends StatelessWidget {
               const Icon(
                 Icons.medical_services,
                 size: 300,
-                color: Colors.blue,
+                color: Colors.indigoAccent,
               ),
               const SizedBox(height: 20),
               const Text(
@@ -41,9 +41,9 @@ class LandingPage extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Colors.indigoAccent.shade700,
                   foregroundColor: Colors.white,
-                  minimumSize: const Size(double.infinity, 50),
+                  minimumSize: const Size(double.infinity, 100),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
@@ -65,9 +65,9 @@ class LandingPage extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue.shade100,
-                  foregroundColor: Colors.blue,
-                  minimumSize: const Size(double.infinity, 50),
+                  backgroundColor: Colors.indigo.withOpacity(0.3),
+                  foregroundColor: Colors.white,
+                  minimumSize: const Size(double.infinity, 100),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),

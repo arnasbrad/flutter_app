@@ -20,19 +20,19 @@ class ContactDoctorButton extends StatelessWidget {
         width: double.infinity,
         padding: const EdgeInsets.symmetric(vertical: 12),
         decoration: BoxDecoration(
-          color: Colors.blue.shade100,
+          color: Colors.indigo.shade100,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Icon(Icons.medical_services, color: Colors.blue, size: 50),
-            SizedBox(width: 8),
+          children: [
+            Icon(Icons.medical_services, color: Colors.indigoAccent, size: 50),
+            const SizedBox(width: 8),
             Text(
               'Contact Doctor',
               style: TextStyle(
-                color: Colors.blue,
-                fontSize: 40,
+                color: Colors.indigoAccent,
+                fontSize: 50,
                 fontWeight: FontWeight.w500,
               ),
             ),

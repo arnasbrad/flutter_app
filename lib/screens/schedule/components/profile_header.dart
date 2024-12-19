@@ -18,7 +18,7 @@ class ProfileHeader extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 50,
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.indigoAccent,
             child: const Icon(
               Icons.person,
               color: Colors.white,
@@ -26,11 +26,11 @@ class ProfileHeader extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 12),
-          const Text(
+          Text(
             'Profile',
             style: TextStyle(
               fontSize: 50,
-              color: Colors.blue,
+              color: Colors.indigoAccent,
               fontWeight: FontWeight.bold,
             ),
           ),
