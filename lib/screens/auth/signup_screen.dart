@@ -126,6 +126,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   icon: Icon(
                     _obscurePassword ? Icons.visibility_off : Icons.visibility,
                     color: Colors.grey,
+                    size: 50
                   ),
                   onPressed: () {
                     setState(() {

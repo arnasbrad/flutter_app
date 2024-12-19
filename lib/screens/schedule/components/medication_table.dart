@@ -71,7 +71,7 @@ class _MedicationTableState extends State<MedicationTable> {
                 child: Container(
                   decoration: BoxDecoration(
                     color: medication['taken'] == true
-                        ? Colors.indigoAccent.shade100
+                        ? Colors.green.shade100
                         : Colors.indigo.shade50,
                     border: Border.all(color: Colors.indigo.shade200),
                   ),
@@ -101,9 +101,9 @@ class _MedicationTableState extends State<MedicationTable> {
                         child: SizedBox(
                           width: 60,
                           child: medication['taken'] == true
-                              ? Icon(
+                              ? const Icon(
                             Icons.check_circle,
-                            color: Colors.indigoAccent.shade700,
+                            color: Colors.green,
                             size: 40,
                           )
                               : null,
